@@ -1,0 +1,27 @@
+<template>
+  <div>
+    <b-tabs v-model="activeTab" content-class="mt-3">
+      <b-tab title="First"><b-input v-b-tooltip.hover title="ex: hello"></b-tab>
+      <b-tab title="Second"><p>I'm the second tab</p></b-tab>
+      <b-tab title="Disabled" disabled><p>I'm a disabled tab!</p></b-tab>
+    </b-tabs>
+    
+    <b-button @click="setActiveTab('first')">Show First Tab</b-button>
+    <b-button @click="setActiveTab('second')">Show Second Tab</b-button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      activeTab: 'first' // Set the initial active tab
+    };
+  },
+  methods: {
+    setActiveTab(tab) {
+      this.activeTab = tab; // Change the active tab based on the button clicked
+    }
+  }
+};
+</script>
