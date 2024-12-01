@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+  <div>
   <b-navbar toggleable="lg" type="dark" variant="dark">
     <b-navbar-brand href="#">Blood Bank</b-navbar-brand>
 
@@ -19,11 +19,10 @@
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
-
-
    <b-tabs v-model="activeTab" content-class="mt-3">
-      <b-tab title="First"><b-input v-b-tooltip.hover title="ex: hello"></b-tab>
-      <b-tab title="Second"><b-input v-b-popover.hover.top="'I am popover directive content!'" title="Popover Title"></b-input></b-tab>
+      <b-tab title="Donation List"><b-input v-b-tooltip.hover title="ex: hello"></b-tab>
+      <b-tab title="Donor List"><b-input v-b-popover.hover.top="'I am popover directive content!'" title="Popover Title"></b-input></b-tab>
+        <b-tab title="Donated List"></b-tab>
     </b-tabs>
     
     <b-button @click="setActiveTab('first')">Show First Tab</b-button>
